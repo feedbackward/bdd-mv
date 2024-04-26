@@ -2,7 +2,7 @@
 
 In this repository, we provide software and demonstrations related to the following paper:
 
-- <a href="https://proceedings.mlr.press/v238/j-holland24a.html">Robust variance-regularized risk minimization with concomitant scaling</a>. Matthew J. Holland, *AISTATS 2024*.
+- <a href="https://proceedings.mlr.press/v238/j-holland24a.html">Robust variance-regularized risk minimization with concomitant scaling</a>. Matthew J. Holland, AISTATS 2024.
 
 This repository contains code which can be used to faithfully reproduce all the experimental results given in the above paper, and it can be easily applied to more general machine learning tasks outside the examples considered here.
 
