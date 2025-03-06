@@ -2,24 +2,23 @@
 
 In this repository, we provide software and demonstrations related to the following paper:
 
-- <a href="https://proceedings.mlr.press/v238/holland24a.html">Robust variance-regularized risk minimization with concomitant scaling</a>. Matthew J. Holland, AISTATS 2024.
+- [Robust variance-regularized risk minimization with concomitant scaling](https://proceedings.mlr.press/v238/holland24a.html). Matthew J. Holland. *AISTATS 2024*.
 
 This repository contains code which can be used to faithfully reproduce all the experimental results given in the above paper, and it can be easily applied to more general machine learning tasks outside the examples considered here.
 
 
 A table of contents for this README file:
 
-- <a href="#setup_init">Setup: initial software preparation</a>
-- <a href="#setup_data">Setup: preparing the benchmark data sets</a>
-- <a href="#start">Getting started</a>
-- <a href="#demos">Demos and visualization</a>
-- <a href="#safehash">Safe hash value</a>
+- Setup: initial software preparation
+- Setup: preparing the benchmark data sets
+- Getting started
+- Demos and visualization
+- Safe hash value
 
 
-<a id="setup_init"></a>
 ## Setup: initial software preparation
 
-To begin, please ensure you have the <a href="https://github.com/feedbackward/mml#prerequisites">prerequisite software</a> used in the setup of our `mml` repository.
+To begin, please ensure you have the [prerequisite software](https://github.com/feedbackward/mml) used in the setup of our `mml` repository.
 
 Next, make a local copy of the repository and create a virtual environment for working in as follows:
 
@@ -46,15 +45,13 @@ with the `[mml path]` placeholder replaced with the path to wherever you placed 
 and then do the `pip install -e ./` command mentioned above. The `[safe hash mml]` placeholder is to be replaced using the safe hash value given at the end of this document.
 
 
-<a id="setup_data"></a>
 ## Setup: preparing the benchmark data sets
 
-Please follow the instructions under <a href="https://github.com/feedbackward/mml#data">"Acquiring benchmark datasets"</a> using our `mml` repository. The rest of this README assumes that the user has prepared any desired benchmark datasets, stored in a local data storage directory (default path is `[path to mml]/mml/mml/data` as specified by the variable `dir_data_towrite` in `mml/mml/config.py`.
+Please follow the instructions under ["Acquiring benchmark datasets"](https://github.com/feedbackward/mml) using our `mml` repository. The rest of this README assumes that the user has prepared any desired benchmark datasets, stored in a local data storage directory (default path is `[path to mml]/mml/mml/data` as specified by the variable `dir_data_towrite` in `mml/mml/config.py`.
 
 One __important__ step is to ensure that once you've acquired the benchmark data using `mml`, you must ensure that `bdd` knows where that data is. To do this, set `dir_data_toread` in `setup_data.py` to the directory housing the HDF5 format data sub-directories (default setting: your home directory).
 
 
-<a id="start"></a>
 ## Getting started
 
 We have basically three types of files:
@@ -82,17 +79,15 @@ This example uses `run.sh` and `run_common.sh` to execute tests with pre-fixed s
 Of course, the above examples assume the user has (via `mml` or some other route) already obtained the datasets (`adult`, `australian`, `cifar10`, `fashion_mnist`) being specified, and that `setup_data.py` has been modified such that the program knows where to find the data.
 
 
-<a id="demos"></a>
 ## List of demos
 
-This repository includes detailed demonstrations to walk the user through re-creating the results in the paper cited at the top of this document. Below is a list of demo links which give our demos (constructed in Jupyter notebook form) rendered using the useful <a href="https://github.com/jupyter/nbviewer">nbviewer</a> service.
+This repository includes detailed demonstrations to walk the user through re-creating the results in the paper cited at the top of this document. Below is a list of demo links which give our demos (constructed in Jupyter notebook form) rendered using the useful [nbviewer](https://github.com/jupyter/nbviewer) service.
 
-- <a href="https://nbviewer.jupyter.org/github/feedbackward/bdd-mv/blob/main/bdd-mv/sun_huber.ipynb">Examining the Sun-Huber dispersion function</a> (sections 2 and 3 in paper)
-- <a href="https://nbviewer.jupyter.org/github/feedbackward/bdd-mv/blob/main/bdd-mv/2D_classification.ipynb">2D classification tests using simulated data</a> (section 4.1 in paper)
-- <a href="https://nbviewer.jupyter.org/github/feedbackward/bdd-mv/blob/main/bdd-mv/real_data.ipynb">Tests using real data benchmarks</a> (section 4.2 in paper)
+- [Examining the Sun-Huber dispersion function](https://nbviewer.jupyter.org/github/feedbackward/bdd-mv/blob/main/bdd-mv/sun_huber.ipynb) (sections 2 and 3 in paper)
+- [2D classification tests using simulated data](https://nbviewer.jupyter.org/github/feedbackward/bdd-mv/blob/main/bdd-mv/2D_classification.ipynb) (section 4.1 in paper)
+- [Tests using real data benchmarks](https://nbviewer.jupyter.org/github/feedbackward/bdd-mv/blob/main/bdd-mv/real_data.ipynb) (section 4.2 in paper)
 
 
-<a id="safehash"></a>
 ## Safe hash value
 
 - Replace `[safe hash mml]` with `30b0f2be3f4b755c4ac9b1170883d983dc93a5fd`.
